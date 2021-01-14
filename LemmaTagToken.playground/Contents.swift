@@ -13,8 +13,8 @@ gone before!
 
 extension String {
     func printlemmas() {
-        let tagger = NSLiguisticTagger(tagSchemes:[.lemma], options: 0)
-        let options: NSLiguisticTagger.Options = [.omitPunctuation, .omitWhiteSpace, .joinNames]
+        let tagger = NSLinguisticTagger(tagSchemes:[.lemma], options: 0)
+        let options: NSLinguisticTagger.Options = [.omitPunctuation, .omitWhitespace, .joinNames]
         
         tagger.string = self
         let range = NSRange(location: 0, length: self.utf16.count)
@@ -27,3 +27,5 @@ extension String {
         }
     }
 }
+
+speech.printlemmas()
